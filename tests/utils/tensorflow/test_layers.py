@@ -3,6 +3,7 @@ import pytest
 from _pytest.monkeypatch import MonkeyPatch
 import numpy as np
 import tensorflow as tf
+import tf_keras
 
 from rasa.utils.tensorflow.layers import (
     DotProductLoss,

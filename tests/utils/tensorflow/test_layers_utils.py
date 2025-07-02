@@ -3,6 +3,7 @@ import tensorflow as tf
 import numpy as np
 from typing import List, Optional, Union
 import rasa.utils.tensorflow.layers_utils as layers_utils
+import tf_keras
 
 
 @pytest.mark.parametrize(

@@ -1,6 +1,7 @@
 import tensorflow as tf
 from tensorflow import Tensor
 from typing import Union, Optional
+import tf_keras
 
 
 def random_indices(

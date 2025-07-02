@@ -5,6 +5,7 @@ from rasa.nlu.featurizers.featurizer import Featurizer
 
 import numpy as np
 import tensorflow as tf
+import tf_keras
 
 from typing import Any, Dict, Optional, Text, Tuple, Union, List, Type
 
@@ -694,11 +695,11 @@ class DIET2BOW(DIET):
     def _create_metrics(self) -> None:
         # self.metrics preserve order
         # output losses first
-        self.mask_loss = tf.keras.metrics.Mean(name="m_loss")
-        self.response_loss = tf.keras.metrics.Mean(name="r_loss")
+        self.mask_loss = tf_keras.metrics.Mean(name="m_loss")
+        self.response_loss = tf_keras.metrics.Mean(name="r_loss")
         # output accuracies second
-        self.mask_acc = tf.keras.metrics.Mean(name="m_acc")
-        self.response_acc = tf.keras.metrics.Mean(name="r_acc")
+        self.mask_acc = tf_keras.metrics.Mean(name="m_acc")
+        self.response_acc = tf_keras.metrics.Mean(name="r_acc")
 
     def _update_metrics_to_log(self) -> None:
         debug_log_level = logging.getLogger("rasa").level == logging.DEBUG
@@ -755,11 +756,11 @@ class DIET2DIET(DIET):
     def _create_metrics(self) -> None:
         # self.metrics preserve order
         # output losses first
-        self.mask_loss = tf.keras.metrics.Mean(name="m_loss")
-        self.response_loss = tf.keras.metrics.Mean(name="r_loss")
+        self.mask_loss = tf_keras.metrics.Mean(name="m_loss")
+        self.response_loss = tf_keras.metrics.Mean(name="r_loss")
         # output accuracies second
-        self.mask_acc = tf.keras.metrics.Mean(name="m_acc")
-        self.response_acc = tf.keras.metrics.Mean(name="r_acc")
+        self.mask_acc = tf_keras.metrics.Mean(name="m_acc")
+        self.response_acc = tf_keras.metrics.Mean(name="r_acc")
 
     def _update_metrics_to_log(self) -> None:
         debug_log_level = logging.getLogger("rasa").level == logging.DEBUG

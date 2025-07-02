@@ -2,6 +2,7 @@ import tensorflow as tf
 from tensorflow.keras import backend as K
 from tensorflow.types.experimental import TensorLike
 from typing import Any, Dict, Optional
+import tf_keras
 
 
 # original code taken from
@@ -9,7 +10,7 @@ from typing import Any, Dict, Optional
 # (modified to our neeeds)
 
 
-class FBetaScore(tf.keras.metrics.Metric):
+class FBetaScore(tf_keras.metrics.Metric):
     r"""Computes F-Beta score.
 
     It is the weighted harmonic mean of precision

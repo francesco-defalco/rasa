@@ -7,6 +7,7 @@
 import numpy as np
 import pytest
 import tensorflow as tf
+import tf_keras
 from rasa.utils.tensorflow.metrics import FBetaScore, F1Score
 
 

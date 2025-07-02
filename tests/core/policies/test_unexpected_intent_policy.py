@@ -2,6 +2,7 @@ import json
 from pathlib import Path
 from typing import Optional, List, Dict, Type
 import tensorflow as tf
+import tf_keras
 import numpy as np
 import pytest
 from _pytest.monkeypatch import MonkeyPatch

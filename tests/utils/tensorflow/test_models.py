@@ -2,6 +2,7 @@ import pytest
 from typing import Dict, Text, Union, Tuple, List
 import numpy as np
 import tensorflow as tf
+import tf_keras
 
 from rasa.utils.tensorflow.models import RasaModel, TransformerRasaModel
 from rasa.utils.tensorflow.model_data import RasaModelData

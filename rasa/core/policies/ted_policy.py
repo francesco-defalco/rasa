@@ -8,6 +8,7 @@ from typing import Any, List, Optional, Text, Dict, Tuple, Union, Type
 
 import numpy as np
 import tensorflow as tf
+import tf_keras
 
 from rasa.engine.recipes.default_recipe import DefaultV1Recipe
 from rasa.engine.graph import ExecutionContext
@@ -664,7 +665,7 @@ class TEDPolicy(Policy):
                 self._entity_tag_specs,
             )
             self.model.compile(
-                optimizer=tf.keras.optimizers.Adam(self.config[LEARNING_RATE])
+                optimizer=tf_keras.optimizers.Adam(self.config[LEARNING_RATE])
             )
         (
             data_generator,
@@ -1243,10 +1244,10 @@ class TED(TransformerRasaModel):
         self._entity_tag_specs = entity_tag_specs
 
         # metrics
-        self.action_loss = tf.keras.metrics.Mean(name="loss")
-        self.action_acc = tf.keras.metrics.Mean(name="acc")
-        self.entity_loss = tf.keras.metrics.Mean(name="e_loss")
-        self.entity_f1 = tf.keras.metrics.Mean(name="e_f1")
+        self.action_loss = tf_keras.metrics.Mean(name="loss")
+        self.action_acc = tf_keras.metrics.Mean(name="acc")
+        self.entity_loss = tf_keras.metrics.Mean(name="e_loss")
+        self.entity_f1 = tf_keras.metrics.Mean(name="e_f1")
         self.metrics_to_log += ["loss", "acc"]
         if self.config[ENTITY_RECOGNITION]:
             self.metrics_to_log += ["e_loss", "e_f1"]

@@ -4,6 +4,7 @@ import os
 from typing import Any, Dict, List, Optional, Text, Tuple, Type
 
 import tensorflow as tf
+import tf_keras
 from tensorflow.python.eager.wrap_function import WrappedFunction
 from tqdm import tqdm
 import numpy as np

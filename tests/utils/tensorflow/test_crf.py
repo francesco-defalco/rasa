@@ -9,6 +9,7 @@ import itertools
 import pytest
 import numpy as np
 import tensorflow as tf
+import tf_keras
 
 from rasa.utils.tensorflow.crf import (
     crf_sequence_score,

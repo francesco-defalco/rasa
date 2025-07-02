@@ -1,7 +1,6 @@
 from pathlib import Path
 import numpy as np
 from typing import Optional, Text, Dict, Any, Union, List, Tuple, TYPE_CHECKING
-
 import rasa.shared.utils.common
 import rasa.shared.utils.io
 import rasa.nlu.utils.bilou_utils
@@ -375,7 +374,7 @@ def create_common_callbacks(
 
     if tensorboard_log_dir:
         callbacks.append(
-            tf.keras.callbacks.TensorBoard(
+            tf_keras.callbacks.TensorBoard(
                 log_dir=tensorboard_log_dir,
                 update_freq=tensorboard_log_level,
                 write_graph=True,

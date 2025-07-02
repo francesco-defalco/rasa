@@ -1,7 +1,7 @@
 import sys
 
 import tensorflow as tf
-
+import tf_keras
 
 def check_gpu_available():
     num_gpus = len(tf.config.list_physical_devices("GPU"))
